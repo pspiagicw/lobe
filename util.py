@@ -59,4 +59,6 @@ def predict(model):
 
 def main():
     label_frame = get_label_frame()
-    cireate_directory_structure(label_frame)
+    create_directory_structure(label_frame)
+    return len(label_frame)
+
