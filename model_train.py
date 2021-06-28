@@ -13,17 +13,13 @@ def get_data():
 def main(no_of_label):
     train_data , test_data = get_data()
     model = keras.Sequential([
-        keras.layers.Conv2D(32,3,activation="relu"),
-        keras.layers.MaxPool2D(),
-        keras.layers.Conv2D(32,3,activation="relu"),
-        keras.layers.MaxPool2D(),
-        keras.layers.Conv2D(32,3,activation="relu"),
-        keras.layers.MaxPool2D(),
+        keras.layers.Conv2D(filters=128,kernel_size=3,activation="relu"),
+        keras.layers.MaxPool2D(pool_size=(2,2)),
+        keras.layers.Conv2D(filters=64,kernel_size=3,activation="relu"),
+        keras.layers.MaxPool2D(pool_size=(2,2)),
         keras.layers.Flatten(),
-        keras.layers.Dense(200,activation="relu"),
+        keras.layers.Dense(512 , activation="relu"),
         keras.layers.Dropout(0.5),
-        keras.layers.Dense(128,activation="relu"),
-        keras.layers.Dropout(0.3),
         keras.layers.Dense(no_of_label,activation="sigmoid")
         ])
     model.compile(optimizer="adam",loss="sparse_categorical_crossentropy",metrics=['accuracy'])

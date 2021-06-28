@@ -1,0 +1,23 @@
+* Lobe
+  Inspired from [[https://lobe.ai][lobe.ai]] , this tool tries to provide the tools of Deep Learning to the non-technical people.This project was just a weekend fun project .
+
+** Installation
+   There is no installation  , simple clone this repository using ~git clone https://github.com/pspiagicw/lobe~ and run main.py using a Python 3 interpreter.
+
+   #+begin_src bash
+     git clone https://github.com/pspiagicw/lobe
+     cd lobe
+     python3 main.py
+   #+end_src
+
+
+** Features
+   It only supports cli input and depends on webcam input , it does not support custom images till now.
+
+   
+** Performance
+   It has quite low accuracy and is not a serious tool.Recommendations to improve it are welcome!
+
+   
+** Dependencies
+   It requires [[keras][https://keras.io]] for DeepLearning and [[OpenCV][https://opencv.org]] for taking images from the webcam.
